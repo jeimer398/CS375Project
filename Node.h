@@ -3,6 +3,7 @@
 #include<iostream>
 #include<vector>
 #include<fstream>
+#include<deque>
 
 enum VISITED{
 	black,
@@ -20,4 +21,5 @@ struct Graph{
 	std::vector<Node> node_lst;
 };
 
+void BFS(struct Graph, int);
 #endif

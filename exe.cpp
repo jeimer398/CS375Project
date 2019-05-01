@@ -33,5 +33,7 @@ int main(int argc, char ** argv){
 		}
 	}
 
+	BFS(graph, 0);
+
 	return 0;
 }
