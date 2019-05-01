@@ -1,6 +1,7 @@
 #include"Node.h"
 
 using namespace std;
+using namespace std::chrono;
 
 struct Graph graph;
 
@@ -35,8 +36,11 @@ int main(int argc, char ** argv){
 	/* } */
 
 	string bfsret = ""; 
+	auto start = steady_clock::now();
 	bfsret = BFS_helper(graph);
-	outfile << bfsret << endl;
+	auto stop = steady_clock::now();
+	auto duration = duration_cast<microseconds>(stop - start);
+	outfile << bfsret << "\tDuration is " << duration.count() << ("ms") << endl;
 
 	return 0;
 }

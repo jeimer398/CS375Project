@@ -5,6 +5,7 @@
 #include<fstream>
 #include<deque>
 #include<string>
+#include<chrono>
 
 enum VISITED{
 	black,

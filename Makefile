@@ -13,8 +13,10 @@ dfs.o: DFS.cpp Node.h
 
 run: all
 	./exe tests/test1.txt outfile1.txt
+	cat outfile1.txt
 	echo "==="
 	./exe tests/test2.txt outfile2.txt
+	cat outfile2.txt
 
 gdb: all
 	gdb ./exe
