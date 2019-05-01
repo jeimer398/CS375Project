@@ -3,9 +3,9 @@
 using namespace std;
 
 string BFS_helper(struct Graph g){
+	for(Node n : g.node_lst) n.color = white;
 	string ret = "";
 	for(Node n : g.node_lst){
-		/* cout << n.id << "   " << n.color << endl; */
 		if(n.color == white){
 			ret += BFS(&g, n.id);
 		}

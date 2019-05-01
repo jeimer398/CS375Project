@@ -25,4 +25,6 @@ struct Graph{
 
 std::string BFS(struct Graph *, int);
 std::string BFS_helper(struct Graph);
+std::string DFS(struct Graph *, int);
+std::string DFS_helper(struct Graph);
 #endif

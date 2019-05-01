@@ -35,12 +35,29 @@ int main(int argc, char ** argv){
 	/* 	} */
 	/* } */
 
+	/* BFS */
 	string bfsret = ""; 
+
 	auto start = steady_clock::now();
+
 	bfsret = BFS_helper(graph);
+	
 	auto stop = steady_clock::now();
 	auto duration = duration_cast<microseconds>(stop - start);
+
 	outfile << bfsret << "\tDuration is " << duration.count() << ("ms") << endl;
+
+	/* DFS */
+	string dfsret = ""; 
+
+	start = steady_clock::now();
+
+	dfsret = DFS_helper(graph);
+	
+	stop = steady_clock::now();
+	duration = duration_cast<microseconds>(stop - start);
+
+	outfile << dfsret << "\tDuration is " << duration.count() << ("ms") << endl;
 
 	return 0;
 }
