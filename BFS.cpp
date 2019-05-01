@@ -2,23 +2,21 @@
 
 using namespace std;
 
-void breakhere(){
-	int i = 0;
-	i++;
-}
-
-void BFS_helper(struct Graph g){
+string BFS_helper(struct Graph g){
+	string ret = "";
 	for(Node n : g.node_lst){
-		cout << n.id << "   " << n.color << endl;
+		/* cout << n.id << "   " << n.color << endl; */
 		if(n.color == white){
-			BFS(&g, n.id);
+			ret += BFS(&g, n.id);
 		}
 	}
+	return ret;
 }
 
-void BFS(struct Graph *g, int start_id){
-	breakhere();
-	cout << "In BFS" << endl;
+string BFS(struct Graph *g, int start_id){
+	string ret = "";
+	ret += "Beginning BFS\n";
+	ret += "Starting with node: " + str(start_id) + "\n";
 	Node temp;
 	for(Node n : g->node_lst){
 		if(n.id == start_id)
@@ -32,7 +30,7 @@ void BFS(struct Graph *g, int start_id){
 	while(!q.empty()){
 		temp = q.front();
 		q.pop_front();
-		cout << temp.id << endl;
+		ret += "\tVisiting id: " + str(temp.id) + "\n"; 
 		for(int idx : temp.adj_lst){
 			if(g->node_lst[idx].color == white){
 				g->node_lst[idx].color = gray;
@@ -42,5 +40,6 @@ void BFS(struct Graph *g, int start_id){
 		temp.color = black;
 		g->node_lst[temp.id] = temp;
 	}	
-	cout << "Done with BFS" << endl;
+	ret += "Ending BFS\n";
+	return ret;
 }

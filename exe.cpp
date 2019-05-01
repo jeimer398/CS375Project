@@ -4,10 +4,6 @@ using namespace std;
 
 struct Graph graph;
 
-void foo(struct Graph bar){
-	cout << bar.node_lst[0].id << endl;
-}
-
 int main(int argc, char ** argv){
 	if(argc != 3){
 		cout << "To run, use ./main <input.txt> <output.txt>" << endl;
@@ -38,8 +34,9 @@ int main(int argc, char ** argv){
 	/* 	} */
 	/* } */
 
-	BFS_helper(graph);
-	/* foo(graph); */
+	string bfsret = ""; 
+	bfsret = BFS_helper(graph);
+	outfile << bfsret << endl;
 
 	return 0;
 }

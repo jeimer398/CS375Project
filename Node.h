@@ -4,6 +4,7 @@
 #include<vector>
 #include<fstream>
 #include<deque>
+#include<string>
 
 enum VISITED{
 	black,
@@ -21,6 +22,6 @@ struct Graph{
 	std::vector<Node> node_lst;
 };
 
-void BFS(struct Graph *, int);
-void BFS_helper(struct Graph);
+std::string BFS(struct Graph *, int);
+std::string BFS_helper(struct Graph);
 #endif
