@@ -21,5 +21,6 @@ struct Graph{
 	std::vector<Node> node_lst;
 };
 
-void BFS(struct Graph, int);
+void BFS(struct Graph *, int);
+void BFS_helper(struct Graph);
 #endif

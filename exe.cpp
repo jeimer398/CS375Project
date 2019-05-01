@@ -2,6 +2,12 @@
 
 using namespace std;
 
+struct Graph graph;
+
+void foo(struct Graph bar){
+	cout << bar.node_lst[0].id << endl;
+}
+
 int main(int argc, char ** argv){
 	if(argc != 3){
 		cout << "To run, use ./main <input.txt> <output.txt>" << endl;
@@ -12,7 +18,6 @@ int main(int argc, char ** argv){
 	ofstream outfile;
 	outfile.open(argv[2]);
 
-	struct Graph graph;
 	int node_id, num_vals, i, temp_val;
 
 	while(infile >> node_id >> num_vals){
@@ -26,14 +31,15 @@ int main(int argc, char ** argv){
 		graph.node_lst.push_back(node);
 	}
 
-	for(Node n : graph.node_lst){
-		cout << n.id << endl;
-		for(int i : n.adj_lst){
-			cout << "\t" << i << endl;
-		}
-	}
+	/* for(Node n : graph.node_lst){ */
+	/* 	cout << n.id << endl; */
+	/* 	for(int i : n.adj_lst){ */
+	/* 		cout << "\t" << i << endl; */
+	/* 	} */
+	/* } */
 
-	BFS(graph, 0);
+	BFS_helper(graph);
+	/* foo(graph); */
 
 	return 0;
 }
