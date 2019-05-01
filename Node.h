@@ -2,6 +2,7 @@
 #define JJ
 #include<iostream>
 #include<vector>
+#include<fstream>
 
 enum VISITED{
 	black,
@@ -10,12 +11,13 @@ enum VISITED{
 };
 
 struct Node{
+	std::vector<int> adj_lst;
 	int id;
 	enum VISITED color;
 };
 
 struct Graph{
-	std::vector<std::vector<Node>> adj_lst;
+	std::vector<Node> node_lst;
 };
 
 #endif
