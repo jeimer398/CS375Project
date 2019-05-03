@@ -11,6 +11,12 @@ bfs.o: BFS.cpp Node.h
 dfs.o: DFS.cpp Node.h
 	g++ $(CFLAGS) -c DFS.cpp -o dfs.o
 
+parse_to_jflap: parse_to_jflap.cpp
+	g++ $(CFLAGS) parse_to_jflap.cpp -o parse_to_jflap
+
+graph: parse_to_jflap
+	./parse_to_jflap tests/test1.txt jflap/test1.txt
+
 run: all
 	./exe tests/test1.txt outfile1.txt
 	cat outfile1.txt
@@ -22,4 +28,4 @@ gdb: all
 	gdb ./exe
 
 clean: 
-	rm exe *.o *.txt
+	rm exe *.o *.txt parse_to_jflap
