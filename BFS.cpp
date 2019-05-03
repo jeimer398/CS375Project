@@ -2,8 +2,13 @@
 
 using namespace std;
 
+void breakhere(){
+	int i = 0;
+	i++;
+}
+
 string BFS_helper(struct Graph g){
-	for(Node n : g.node_lst) n.color = white;
+	breakhere();
 	string ret = "";
 	for(Node n : g.node_lst){
 		if(n.color == white){
@@ -18,11 +23,6 @@ string BFS(struct Graph *g, int start_id){
 	ret += "Beginning BFS\n";
 	ret += "\tStarting with node: " + to_string(start_id) + "\n";
 	Node temp;
-	for(Node n : g->node_lst){
-		if(n.id == start_id)
-			continue;
-		n.color = white;
-	}
 	g->node_lst[start_id].color = gray;
 	deque<Node> q;
 	q.push_back(g->node_lst[start_id]);

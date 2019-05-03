@@ -37,6 +37,7 @@ int main(int argc, char ** argv){
 
 	/* BFS */
 	string bfsret = ""; 
+	for(Node n : graph.node_lst) n.color = white;
 
 	auto start = steady_clock::now();
 
@@ -49,6 +50,7 @@ int main(int argc, char ** argv){
 
 	/* DFS */
 	string dfsret = ""; 
+	for(Node n : graph.node_lst) n.color = white;
 
 	start = steady_clock::now();
 

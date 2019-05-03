@@ -23,6 +23,11 @@ run: all
 	echo "==="
 	./exe tests/test2.txt outfile2.txt
 	cat outfile2.txt
+	./exe tests/test3.txt outfile3.txt
+	cat outfile3.txt
+	echo "==="
+	./exe tests/test4.txt outfile4.txt
+	cat outfile4.txt
 
 gdb: all
 	gdb ./exe

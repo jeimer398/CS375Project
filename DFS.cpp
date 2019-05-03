@@ -3,7 +3,6 @@
 using namespace std;
 
 string DFS_helper(struct Graph g){
-	for(Node n : g.node_lst) n.color = white;
 	string ret = "";
 	ret += "\nBeginning DFS\n";
 	for(Node n : g.node_lst){
