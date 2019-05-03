@@ -22,7 +22,7 @@ int main(int argc, char ** argv){
 	string test3 = "tests/manycycle.txt";
 	string test4 = "tests/random.txt";
 
-	int num_nodes = 15;
+	int num_nodes = 100;
 	int MAX_EDGES = 15;
 	string outstr = "";
 
