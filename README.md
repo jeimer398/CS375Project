@@ -41,7 +41,8 @@ Beginning BFS
 	Visiting id: i
 ...
 Ending BFS
-	Duration is (x)ms
+	Duration is (x)ms  
+
 Beginning DFS
 	Visiting id: i
 	Visiting id: i
