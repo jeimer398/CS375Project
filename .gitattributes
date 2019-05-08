@@ -1,0 +1,2 @@
+jflap/*.txt filter=lfs diff=lfs merge=lfs -text
+tests/*.txt filter=lfs diff=lfs merge=lfs -text
