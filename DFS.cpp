@@ -3,14 +3,14 @@
 using namespace std;
 
 string DFS_helper(struct Graph g){
-	string ret = "";
-	ret += "\nBeginning DFS\n";
+	string ret = "\n";
 	for(Node n : g.node_lst){
 		if(n.color == white){
+			ret += "Beginning DFS\n";
 			ret += DFS(&g, n.id);
+			ret += "Ending DFS\n";
 		}
 	}
-	ret += "Ending DFS\n";
 	return ret;
 }
 

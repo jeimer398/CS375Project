@@ -17,13 +17,12 @@ bool isin(vector<int> vect, int findme){
 }
 
 int main(int argc, char ** argv){
-	string test1 = "tests/bintree.txt";
-	string test2 = "tests/onecycle.txt";
-	string test3 = "tests/manycycle.txt";
-	string test4 = "tests/random.txt";
+	/* string test1 = "tests/bintree10000.txt"; */
+	/* string test2 = "tests/onecycle10000.txt"; */
+	string test4 = "tests/random10000-8000.txt";
 
-	int num_nodes = 100;
-	int MAX_EDGES = 15;
+	int num_nodes = 10000;
+	int MAX_EDGES = 8000;
 	string outstr = "";
 
 	srand(time(NULL));
@@ -31,35 +30,35 @@ int main(int argc, char ** argv){
 
 	//bintree
 	ofstream outfile;
-	outfile.open(test1);
-	for(int i=0; i<num_nodes+1; i++){
-		outstr += to_string(i) + " ";
-		//if any edges
-		if(i < num_nodes / 2 ){
-			//add edges
-			int num_edge = 2; // rand() % MAX + 1;
-			outstr += to_string(num_edge) + " ";
-			outstr += to_string(i*2+1) + " ";
-			outstr += to_string(i*2+2);
-		}else{
-			outstr += "0";
-		}
-		outstr += "\n";
-	}
-	outfile << outstr << endl;
-	outfile.close();
+	/* outfile.open(test1); */
+	/* for(int i=0; i<num_nodes+1; i++){ */
+	/* 	outstr += to_string(i) + " "; */
+	/* 	//if any edges */
+	/* 	if(i < num_nodes / 2 ){ */
+	/* 		//add edges */
+	/* 		int num_edge = 2; // rand() % MAX + 1; */
+	/* 		outstr += to_string(num_edge) + " "; */
+	/* 		outstr += to_string(i*2+1) + " "; */
+	/* 		outstr += to_string(i*2+2); */
+	/* 	}else{ */
+	/* 		outstr += "0"; */
+	/* 	} */
+	/* 	outstr += "\n"; */
+	/* } */
+	/* outfile << outstr << endl; */
+	/* outfile.close(); */
 
-	//circle
-	outstr = "";
-	outfile.open(test2);
-	for(int i=0; i<num_nodes; i++){
-		outstr += to_string(i) + " ";
-		outstr += to_string(1) + " ";
-		outstr += to_string((i+1) % num_nodes) + " ";
-		outstr += "\n";
-	}
-	outfile << outstr << endl;
-	outfile.close();
+	/* //circle */
+	/* outstr = ""; */
+	/* outfile.open(test2); */
+	/* for(int i=0; i<num_nodes; i++){ */
+	/* 	outstr += to_string(i) + " "; */
+	/* 	outstr += to_string(1) + " "; */
+	/* 	outstr += to_string((i+1) % num_nodes) + " "; */
+	/* 	outstr += "\n"; */
+	/* } */
+	/* outfile << outstr << endl; */
+	/* outfile.close(); */
 
 	//random
 	outstr = "";
