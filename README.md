@@ -35,6 +35,25 @@ Once you have generated jflap files (they will have extension ".txt"), you can o
 To run, type `make exe` and then `./exe <input_filename> <output_filename>`. 
 Alternatively, (assuming input files have already been generated), simply type `make run` and the outputs files will be generated and placed in the "outputs" folder. 
 
+## Data Structures  
+
+The primary data structures are:
+* Node
+  * vector<int> adjacency list
+  * int node id
+  * enum VISITED color (black, white, or gray)
+* Graph
+  * vector<Node> node list  
+
+Also used standard library implementations of:
+* vector 
+  * used in Graph
+  * used in Node
+* deque (queue)
+  * used in BFS
+
+(no classes were used)
+
 ## Output 
 The output is of the form: 
 ```
