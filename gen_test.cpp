@@ -19,7 +19,7 @@ bool isin(vector<int> vect, int findme){
 int main(int argc, char ** argv){
 	/* string test1 = "tests/bintree10000.txt"; */
 	/* string test2 = "tests/onecycle10000.txt"; */
-	string test4 = "tests/random10000-8000.txt";
+	string test3 = "tests/random10000-8000.txt";
 
 	int num_nodes = 10000;
 	int MAX_EDGES = 8000;
@@ -62,7 +62,7 @@ int main(int argc, char ** argv){
 
 	//random
 	outstr = "";
-	outfile.open(test4);
+	outfile.open(test3);
 	for(int i=0; i<num_nodes; i++){
 		outstr += to_string(i) + " ";
 		//if any edges
