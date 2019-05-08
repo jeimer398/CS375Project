@@ -37,17 +37,17 @@ Alternatively, (assuming input files have already been generated), simply type `
 The output is of the form: 
 ```
 Beginning BFS
-&nbsp;&nbsp;&nbsp;&nbsp;Visiting id: i
-&nbsp;&nbsp;&nbsp;&nbsp;Visiting id: i
+	Visiting id: i
+	Visiting id: i
 ...
 Ending BFS
-&nbsp;&nbsp;&nbsp;&nbsp;Duration is (x)ms
+	Duration is (x)ms
 Beginning DFS
-&nbsp;&nbsp;&nbsp;&nbsp;Visiting id: i
-&nbsp;&nbsp;&nbsp;&nbsp;Visiting id: i
+	Visiting id: i
+	Visiting id: i
 ...
 Ending DFS
-&nbsp;&nbsp;&nbsp;&nbsp;Duration is (x)ms
+	Duration is (x)ms
 ```
 Where each connected/reachable component begins and ends with "Beginning BFS/DFS" and "Ending BFS/DFS". 
 And the node ids are listed in the order they were visited.
